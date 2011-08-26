@@ -1,0 +1,28 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: dev_mode
+  pool: 5
+  username: postgres
+  password: postgres
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: test_mode
+  pool: 5
+  username: postgres
+  password: postgres
+  template: template0
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: production_mode
+  pool: 5
+  username: postgres
+  password: postgres
+  template: template0
+
+cucumber:
+  <<: *test
